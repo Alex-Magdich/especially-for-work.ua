@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .filter-card {
+    @apply absolute bg-white top-full border-gray-500 rounded-filterBoxRadius left-0 shadow-filterBoxShadow py-2.5 px-5 w-64;
+  }
+  .filter-button{
+    @apply flex items-center cursor-pointer text-blue-500 hover:underline select-none;
+  }
+}
+
+.App {
+  height: 100vh;
+  max-width: 733px;
+  margin: 0 auto;
+}
+
+.animate-adding-comment{
+  animation: addingComment 1.5s forwards ease-in;
+  @keyframes addingComment {
+    0%,100%{
+      background: inherit
+    }
+    50%{
+      background: rgb(0, 161, 241);
+    }
+  }
+}
+
+
+
