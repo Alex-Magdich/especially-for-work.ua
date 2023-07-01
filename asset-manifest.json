@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/especially-for-work.ua/static/css/main.e726bd4b.css",
+    "main.js": "/especially-for-work.ua/static/js/main.89366ad5.js",
+    "index.html": "/especially-for-work.ua/index.html",
+    "main.e726bd4b.css.map": "/especially-for-work.ua/static/css/main.e726bd4b.css.map",
+    "main.89366ad5.js.map": "/especially-for-work.ua/static/js/main.89366ad5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e726bd4b.css",
+    "static/js/main.89366ad5.js"
+  ]
+}
