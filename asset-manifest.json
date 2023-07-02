@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/especially-for-work.ua/static/css/main.09d04d44.css",
-    "main.js": "/especially-for-work.ua/static/js/main.03397b13.js",
+    "main.js": "/especially-for-work.ua/static/js/main.83a1722a.js",
     "index.html": "/especially-for-work.ua/index.html",
     "main.09d04d44.css.map": "/especially-for-work.ua/static/css/main.09d04d44.css.map",
-    "main.03397b13.js.map": "/especially-for-work.ua/static/js/main.03397b13.js.map"
+    "main.83a1722a.js.map": "/especially-for-work.ua/static/js/main.83a1722a.js.map"
   },
   "entrypoints": [
     "static/css/main.09d04d44.css",
-    "static/js/main.03397b13.js"
+    "static/js/main.83a1722a.js"
   ]
 }
