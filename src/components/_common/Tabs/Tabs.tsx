@@ -3,7 +3,7 @@ import {TTabs} from "./types";
 import TabButton from "./items/TabButton";
 
 const Tabs:React.FC<TTabs> = ({tabs}) => {
-    const [currentTabIndex, setCurrentTabIndex] = React.useState(1);
+    const [currentTabIndex, setCurrentTabIndex] = React.useState(0);
     const currentTabContent = tabs[currentTabIndex].content;
 
     return (
