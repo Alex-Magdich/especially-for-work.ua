@@ -6,11 +6,7 @@ export type TProps = {
     onSubmit: (e: SyntheticEvent<HTMLFormElement>) => void;
 };
 
-const AddCommentBlock:React.FC<TProps> = ({
-    value,
-    onChange,
-    onSubmit,
-}) => (
+const AddCommentBlock:React.FC<TProps> = ({ value, onChange, onSubmit }) => (
     <form className='flex px-8 py-4 shadow-commentBoxShadow mt-auto' onSubmit={onSubmit}>
         <input
             type="text"
@@ -20,8 +16,8 @@ const AddCommentBlock:React.FC<TProps> = ({
             className='border border-gray-500 h-10 px-2 py-1 flex-1'
         />
         <button
-            disabled={!value}
             type='submit'
+            disabled={!value}
             className='ml-2 bg-primary px-3.5 py-2 text-white rounded-filterBoxRadius disabled:opacity-75'
         >
             Додати

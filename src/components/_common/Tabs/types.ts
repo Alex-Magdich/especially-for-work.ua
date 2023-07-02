@@ -1,9 +1,10 @@
 import {ReactNode} from "react";
 
 export type TTabButton = {
+    index: number;
     tabName: string;
     isActive: boolean;
-    onClick: () => void;
+    onClick: (index: number) => void;
     additional?: ReactNode;
 }
 

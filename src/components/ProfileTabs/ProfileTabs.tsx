@@ -4,10 +4,14 @@ import {TTabsData} from "../_common/Tabs/types";
 import FilterProfileEvents from "../FilterProfileEvents";
 import TabEvents from "./TabEvents";
 
+const MockContainer = ({children}:{children: string}) => (
+    <div className='flex items-center justify-center h-full text-4xl'>{children}</div>
+)
+
 const TABS: TTabsData = [
     {
         name: 'Резюме та відгуки',
-        content: <div>Резюме та відгуки</div>
+        content: <MockContainer>Резюме та відгуки...</MockContainer>
     },
     {
         name: 'Події',
@@ -16,7 +20,7 @@ const TABS: TTabsData = [
     },
     {
         name: 'Ще проходить',
-        content: <div>Ще проходить</div>
+        content: <MockContainer>Ще проходить...</MockContainer>
     },
 ];
 

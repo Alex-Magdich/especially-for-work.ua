@@ -7,7 +7,7 @@ export type TProps = {
 }
 
 const EventCard:React.FC<TProps> = ({ item, index }) => {
-    const {title, body, isComment} = item;
+    const { title, body, isComment} = item;
     const animation = isComment && index === 0 ? "animate-adding-comment" : '';
 
     return (

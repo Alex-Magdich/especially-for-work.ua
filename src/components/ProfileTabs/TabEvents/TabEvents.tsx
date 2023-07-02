@@ -4,7 +4,9 @@ import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
 import EventsTabContent from "./items/EventsTabContent";
 import EventsTabSkeletons from "./items/EventsTabSkeletons";
 
-export const LIMIT = 4
+export const LIMIT = 4;
+const QUERY_KEY = 'appData';
+const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
 const TabEvents = () => {
     const queryClient = useQueryClient();
@@ -14,39 +16,38 @@ const TabEvents = () => {
     const handleChange = (e: SyntheticEvent<HTMLInputElement>) => setInputValue(e.currentTarget.value);
 
     const { isLoading, error, data } = useQuery({
-        queryKey: ['appData'],
+        queryKey: [QUERY_KEY],
         queryFn: () =>
-            fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${LIMIT}`).then(
+            fetch(`${BASE_URL}/posts?_limit=${LIMIT}`).then(
                 (res) => res.json(),
             ),
         refetchOnWindowFocus: false
     })
 
-    const addComment = () => (fetch('https://jsonplaceholder.typicode.com/posts', {
+    const addComment = () => (fetch(`${BASE_URL}/posts`, {
         method: 'POST',
         body: JSON.stringify(comment),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
+        headers: {'Content-type': 'application/json; charset=UTF-8' },
     }))
 
     const mutation = useMutation({
         mutationFn: addComment,
         onSuccess: () => {
-            queryClient.setQueryData(['appData'], (prevState) => [comment, ...prevState as Array<TEventItem>])
+            queryClient.setQueryData([QUERY_KEY],
+                (prevState) => [comment, ...prevState as Array<TEventItem>])
         },
     })
 
     const handleAddComment = (e: SyntheticEvent<HTMLFormElement>) => {
-        e.preventDefault()
+        e.preventDefault();
         setComment({
             id: Date.now(),
             title: 'Коментар',
             body: inputValue,
             isComment: true
-        })
-        mutation.mutate()
-        setInputValue('')
+        });
+        mutation.mutate();
+        setInputValue('');
     }
 
     if (!data && !isLoading) return <div>Тут нічого немає</div>;

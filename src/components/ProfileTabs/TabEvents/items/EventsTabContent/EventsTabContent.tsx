@@ -18,7 +18,7 @@ const EventsTabContent:React.FC<TProps> = ({
 }) => (
     <>
         <div className='overflow-y-auto'>
-            {(data as Array<TEventItem>).map((item, index) => (
+            {data.map((item, index) => (
                 <EventCard key={item.id} index={index} item={item}/>
             ))}
         </div>

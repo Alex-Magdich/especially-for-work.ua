@@ -3,14 +3,8 @@ import Filters from "../_common/Filters";
 import {TFilterData} from "../_common/Filters/types";
 
 const FILTERS: TFilterData = [
-    {
-        name: 'Всі',
-        isActive: true
-    },
-    {
-        name: 'Коментарі',
-        isActive: false
-    }
+    { name: 'Всі', isActive: true },
+    { name: 'Коментарі', isActive: false }
 ]
 
 const FILTER_NAME = 'Фільтри подій';
