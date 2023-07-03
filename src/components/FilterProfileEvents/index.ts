@@ -1,3 +1,3 @@
-import FilterProfileEvents from "./FilterProfileEvents";
+import FilterProfileEvents from './FilterProfileEvents';
 
 export default FilterProfileEvents;

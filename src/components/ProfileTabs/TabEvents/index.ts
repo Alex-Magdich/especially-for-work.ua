@@ -1,3 +1,3 @@
-import TabEvents from "./TabEvents";
+import TabEvents from './TabEvents';
 
 export default TabEvents;

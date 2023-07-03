@@ -1,3 +1,3 @@
-import ProfileTabs from "./ProfileTabs";
+import ProfileTabs from './ProfileTabs';
 
 export default ProfileTabs;

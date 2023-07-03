@@ -1,14 +1,12 @@
 import React from 'react';
-import Filters from "../_common/Filters";
-import {TFilterData} from "../_common/Filters/types";
+import Filters from '../_common/Filters';
+import { TFilterData } from '../_common/Filters/types';
 
 const FILTERS: TFilterData = [
-    { name: 'Всі', isActive: true },
-    { name: 'Коментарі', isActive: false }
-]
+    { name: 'all', isActive: true },
+    { name: 'comments', isActive: false },
+];
 
-const FILTER_NAME = 'Фільтри подій';
-
-const FilterProfileEvents = () => <Filters name={FILTER_NAME} filters={FILTERS}/>
+const FilterProfileEvents = () => <Filters filtersData={FILTERS} nameKey="filtersEvents"/>;
 
 export default FilterProfileEvents;
