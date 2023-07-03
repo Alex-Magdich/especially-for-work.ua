@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import ProfileTabs from './components/ProfileTabs';
+import ProfileTabs from './components/ProfileTabs/ProfileTabs';
 
 const App = () => (
     <div className="App">

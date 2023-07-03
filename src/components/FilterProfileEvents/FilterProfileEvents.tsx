@@ -1,5 +1,5 @@
 import React from 'react';
-import Filters from '../_common/Filters';
+import Filters from '../_common/Filters/Filters';
 import { TFilterData } from '../_common/Filters/types';
 
 const FILTERS: TFilterData = [

@@ -2,8 +2,8 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import Tabs from '../_common/Tabs';
 import { TTabsData } from '../_common/Tabs/types';
-import FilterProfileEvents from '../FilterProfileEvents';
-import TabEvents from './TabEvents';
+import FilterProfileEvents from '../FilterProfileEvents/FilterProfileEvents';
+import TabEvents from './TabEvents/TabEvents';
 
 const MockContainer = ({ textKey }: { textKey: string }) => {
     const { formatMessage } = useIntl();
